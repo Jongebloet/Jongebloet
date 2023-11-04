@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethereum Tracker</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f1f1f1; /* Light text */
+  }
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #262626; /* Dark container background */
+  }
+  .price-container {
+    margin-bottom: 20px;
+  }
+  .start-amount, .current-amount {
+    margin-top: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  table, th, td {
+    border: 1px solid #444; /* Darker borders for table */
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #333; /* Dark header background */
+  }
+  .button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    outline: none; /* Remove focus outline */
+  }
+  .button.stop {
+    background-color: #f44336;
+  }
+  /* Hover effects for buttons */
+  .button:hover {
+    opacity: 0.9;
+  }
+  .button:active {
+    transform: scale(0.98); /* Small feedback on click */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="price-container">
+    <div>Current ETH Amount: <span id="current-eth">-- ETH</span></div>
+    <div>Current Dollar Price: <span id="current-dollar">-- USD</span></div>
+  </div>
+  <button class="button" id="toggle-button">Run</button>
+  <div class="start-amount">
+    Starting Amount: <span id="start-eth">-- ETH</span> / <span id="start-dollar">-- USD</span>
+  </div>
+  <div class="current-amount">
+    Current Amount: <span id="new-eth">-- ETH</span> (+<span id="eth-diff">--</span>%)
+  </div>
+  <div class="current-amount">
+    Difference: <span id="dollar-diff">+-- USD</span>
+  </div>
+  
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>ETH Amount</th>
+      <th>Dollar Amount</th>
+      <th>Coin Name</th>
+    </tr>
+    <tr>
+      <td>Buy</td>
+      <td>1.5 ETH</td>
+      <td>3000 USD</td>
+      <td>Ethereum</td>
+    </tr>
+    <!-- Add more rows here -->
+  </table>
+</div>
+
+</body>
+</html>
